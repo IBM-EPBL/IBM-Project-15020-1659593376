@@ -1,0 +1,13 @@
+download python 
+install python
+install flask - pip install flask 
+run app - python <filename.py>
+
+
+
+
+
+Development -app built
+
+cI/CD - Continuous Integration/continuous Deployment
+deployment - logging,monitor - Dev Ops(Developer operation) Engineer
