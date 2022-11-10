@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:centos-deployment
+spec:
+   selector:
+     matchlabels:
+       app:ngnix
+   replicas: 2
+   template:
+    metadata:
+      labels:
+        app:ngnix
+    spec:
+    container:
+     -name: ngnix
+      image :ngnix:1.14.2
+    
