@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+    
+    <style>
+        body{
+            transition: background 1s;
+            font-family: 'Silkscreen', cursive;
+        }
+        h1{
+            margin-left: 35%;
+            margin-top: 20%;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            transition : color 1s;
+        }
+
+    </style>
+
+</head>
+<body id="container">
+       <h1>Hello World!</h1>
+
+      <script> 
+      function getRandomNumber(maxNum){
+        return Math.floor(Math.random()*maxNum)
+
+      }
+    const getRandomcolor=()=>{
+     const h = getRandomNumber(360)
+     const s = getRandomNumber(100)
+     const l =getRandomNumber(100)
+
+     //hsl(360,100%.100%)
+     //"hsl("+h+","+s+"%"+I+"%)"
+     return `hsl(${h}deg,${s}%,${l}%)`
+    }
+
+     const setBackgroundColor =  ()=>{
+        const randomColor = getRandomcolor()
+        document.getElementById("container").style.backgroundColor=randomColor
+     }
+
+     setInterval(()=>{
+        setBackgroundColor()
+     },2500);
+    
+    
+      </script>
+</body>
+</html>
